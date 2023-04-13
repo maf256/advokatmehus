@@ -4,6 +4,8 @@ import { Data } from '../common/Data';
 
 
 export default function RightNav ({ hamIsOn,selectedLanguage, setSelectedLanguage}) {
+    
+
   return (
     <Ul hamIsOn={hamIsOn}>
     {

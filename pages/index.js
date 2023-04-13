@@ -1,11 +1,6 @@
 import Head from 'next/head'
 import Navbar from './components/navbar/Navbar'
-import { Inter } from 'next/font/google'
-// import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
-
-const inter = Inter({ subsets: ['latin'] })
-
 
 export default function Home() {
   const [hamIsOn, setHamIsOn] = useState(false)
@@ -22,7 +17,6 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />       
         
       </Head>
-      <Navbar selectedLanguage= 'en' hamIsOn={hamIsOn} setHamIsOn={setHamIsOn}  />
       <main onClick={()=> setHamIsOn(false)}>
         <h1>Hello World</h1>
         <h1>Hello World</h1>
