@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Data } from '../common/Data';
 
 
-export default function RightNav ({ open,selectedLanguage, setSelectedLanguage}) {
+export default function RightNav ({ hamIsOn,selectedLanguage, setSelectedLanguage}) {
   return (
-    <Ul open={open}>
+    <Ul hamIsOn={hamIsOn}>
     {
         Data.skills.menu[selectedLanguage].map((item, inx) => 
         <li 
@@ -21,10 +21,6 @@ export default function RightNav ({ open,selectedLanguage, setSelectedLanguage})
     </Ul>
   )
 }
-
-
-
-
 
 const Ul = styled.ul`
     a {
@@ -56,25 +52,19 @@ const Ul = styled.ul`
         transition: width .6s;
     }
 
-  @media (max-width: 768px) {
-    flex-flow: column nowrap;
-    background-color: #0D2538;
-    position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 300px;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
-    li {
-      color: #fff;
-      select {
-        color: #FFE9B1;
-      }
+    @media (max-width: 768px) {
+        flex-flow: column nowrap;
+        background-color: #0D2538;
+        position: fixed;
+        transform: ${({ hamIsOn }) => hamIsOn ? 'translateX(0)' : 'translateX(100%)'};
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        padding-top: 3.5rem;
+        transition: transform 0.3s ease-in-out;
+        a {
+            color: ${({ hamIsOn }) => hamIsOn ? '#FFE9B1' : "#112B3C"}; 
+        }
     }
-    a {
-      color: ${({ open }) => open ? '#FFE9B1' : "#112B3C"}; 
-    }
-  }
 `;

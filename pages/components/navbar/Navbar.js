@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Hamburger from './Hamburger.js'
 
-
-
-export default function Navbar ({selectedLanguage, setSelectedLanguage}) {
+export default function Navbar ({selectedLanguage, setSelectedLanguage, hamIsOn, setHamIsOn}) {
 
   return (
     <Nav >
         <a href="#"><h1>Advokat Erling Mehus</h1> </a>
-        <Hamburger selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />        
+        <Hamburger selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} hamIsOn={hamIsOn} setHamIsOn={setHamIsOn} />        
     </Nav>
   )
 }

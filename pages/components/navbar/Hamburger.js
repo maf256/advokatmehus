@@ -3,17 +3,16 @@ import { useState } from "react"
 import RightNav from "./RightNav"
 import React from 'react'
 
-export default function Hamburger({selectedLanguage, setSelectedLanguage}) {
-    const [open, setOpen] = useState(false)
+export default function Hamburger({selectedLanguage, setSelectedLanguage, hamIsOn, setHamIsOn}) {
 
     return (
         <>
-            <StyledHamburger open={open} onClick={() => setOpen(!open) }>
+            <StyledHamburger hamIsOn={hamIsOn} onClick={() => setHamIsOn(!hamIsOn) }>
                 <div></div>
                 <div></div>
                 <div></div>
             </StyledHamburger>
-            <RightNav selectedLanguage={selectedLanguage} open={open} setSelectedLanguage={setSelectedLanguage}/> 
+            <RightNav selectedLanguage={selectedLanguage} hamIsOn={hamIsOn} setSelectedLanguage={setSelectedLanguage}/> 
         </>
     )
 }
