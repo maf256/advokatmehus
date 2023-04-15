@@ -10,9 +10,9 @@ export const Data = {
                 ],
             nr: [
                 {name: 'FORSIDE', href: '/'},
-                {name: 'FAGOMRÅDE', href: 'Abput'},
-                {name: 'ERFARING', href: 'Experiance'},
-                {name: 'KONTAKT', href: 'Contact'}
+                {name: 'FAGOMRÅDE', href: 'about'},
+                {name: 'ERFARING', href: 'experiance'},
+                {name: 'KONTAKT', href: 'contact'}
             ]
         },
     }

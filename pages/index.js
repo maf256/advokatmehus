@@ -3,7 +3,6 @@ import Navbar from './components/navbar/Navbar'
 import { useState } from 'react'
 
 export default function Home() {
-  const [hamIsOn, setHamIsOn] = useState(false)
 
   return (
     <>
@@ -18,21 +17,6 @@ export default function Home() {
         
       </Head>
       <main onClick={()=> setHamIsOn(false)}>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
-        <h1>Hello World</h1>
       </main>
     </>
   )

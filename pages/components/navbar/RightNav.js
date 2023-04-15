@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Data } from '../common/Data';
+import Link from 'next/link';
 
 
 export default function RightNav ({ hamIsOn,selectedLanguage, setSelectedLanguage}) {
@@ -13,9 +14,9 @@ export default function RightNav ({ hamIsOn,selectedLanguage, setSelectedLanguag
         <li 
             className= "cool-link"
             key={inx}>
-            <a href={item.href}>
+            <Link href={item.href}>
             {item.name}
-            </a>
+            </Link>
         </li>
         
         )
