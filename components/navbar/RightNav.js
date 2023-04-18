@@ -31,37 +31,20 @@ export default function RightNav ({ selectedLanguage, setSelectedLanguage}) {
 }
 
 const Ul = styled.ul`
-    a {
-        color: #272F3E;
-        font-size: 18px;
-        font-weight: 600;
-        font-stretch: 100%;
-    }
     list-style: none;
-    display: flex;
-    flex-flow: row nowrap; 
-    /* .cool-link {
-        display: inline-block;
-        text-decoration: none;
-        padding-left: 60px;
+
+    @media (min-width: 900px) {
+        a {
+            color: #272F3E;
+            font-size: 18px;
+            font-weight: 600;
+            font-stretch: 100%;
+        }
+        display: flex;
+        flex-flow: row nowrap;         
     }
-
-    .cool-link
-    ::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 3px;
-        background: black;
-        transition: width .2s;
-    }
-
-    .cool-link:hover::after {
-        width: 100%;
-        transition: width .6s;
-    } */
-
-    @media (max-width: 768px) {
+    
+    @media (max-width: 900px) {
         flex-flow: column nowrap;
         background-color: #0D2538;
         position: fixed;
@@ -80,7 +63,6 @@ const Ul = styled.ul`
 
 
 const Li = styled.li`
-    display: inline-block;
     text-decoration: none;
     padding-left: 60px;
     ::after {
@@ -95,9 +77,4 @@ const Li = styled.li`
         width: 100%;
         transition: width .6s;
     }
-
-
-
-
-
 `
