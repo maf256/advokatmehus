@@ -1,18 +1,21 @@
 import styled from "styled-components"
-import { useState } from "react"
+import { useContext } from "react"
 import RightNav from "./RightNav"
-import React from 'react'
+import AppContext from "../Context/AppContext"
 
-export default function Hamburger({selectedLanguage, setSelectedLanguage, hamIsOn, setHamIsOn}) {
+export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
+    
+    const context = useContext(AppContext)
+    console.log('contact.hamIsOn =>',context.hamIsOn);
 
     return (
         <>
-            <StyledHamburger hamIsOn={hamIsOn} onClick={() => setHamIsOn(!hamIsOn) }>
+            <StyledHamburger onClick={() => context.setHamIsOn(!context.hamIsOn) }>
                 <div></div>
                 <div></div>
                 <div></div>
             </StyledHamburger>
-            <RightNav selectedLanguage={selectedLanguage} hamIsOn={hamIsOn} setSelectedLanguage={setSelectedLanguage}/> 
+            <RightNav selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/> 
         </>
     )
 }

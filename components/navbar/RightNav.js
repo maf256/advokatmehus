@@ -1,23 +1,28 @@
-import React from 'react';
+import {useContext} from 'react';
 import styled from 'styled-components';
 import { Data } from '../common/Data';
 import Link from 'next/link';
+import AppContext from "../Context/AppContext"
 
 
-export default function RightNav ({ hamIsOn,selectedLanguage, setSelectedLanguage}) {
+export default function RightNav ({ selectedLanguage, setSelectedLanguage}) {
+    
+    const context = useContext(AppContext)
     
 
   return (
-    <Ul hamIsOn={hamIsOn}>
+    <Ul hamIsOn={context.hamIsOn}>
     {
         Data.skills.menu[selectedLanguage].map((item, inx) => 
-        <li 
-            className= "cool-link"
+        <Li 
+            // className= "cool-link"
             key={inx}>
-            <Link href={item.href}>
-            {item.name}
+            <Link
+                onClick={()=> context.setHamIsOn(false)}               
+                href={item.href}>
+                {item.name}
             </Link>
-        </li>
+        </Li>
         
         )
     }
@@ -35,13 +40,14 @@ const Ul = styled.ul`
     list-style: none;
     display: flex;
     flex-flow: row nowrap; 
-    .cool-link {
+    /* .cool-link {
         display: inline-block;
         text-decoration: none;
         padding-left: 60px;
     }
 
-    .cool-link::after {
+    .cool-link
+    ::after {
         content: '';
         display: block;
         width: 0;
@@ -53,7 +59,7 @@ const Ul = styled.ul`
     .cool-link:hover::after {
         width: 100%;
         transition: width .6s;
-    }
+    } */
 
     @media (max-width: 768px) {
         flex-flow: column nowrap;
@@ -71,3 +77,27 @@ const Ul = styled.ul`
         }
     }
 `;
+
+
+const Li = styled.li`
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 60px;
+    ::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: black;
+        transition: width .2s;
+    }
+    :hover::after {
+        width: 100%;
+        transition: width .6s;
+    }
+
+
+
+
+
+`
