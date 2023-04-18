@@ -1,11 +1,12 @@
 import {useContext} from 'react'
 import styled from 'styled-components'
 import Hamburger from './Hamburger.js'
+import Link from 'next/link';
 
 export default function Navbar ({selectedLanguage, setSelectedLanguage }) {
   return (
     <Nav >
-        <a href="#"><h1>Advokat Erling Mehus</h1> </a>
+        <Link href="/"><h1>Advokat Erling Mehus</h1> </Link>
         <Hamburger selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />        
     </Nav>
   )
