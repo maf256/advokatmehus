@@ -8,9 +8,7 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
     useEffect(()=> {
         if (hamIsOn){
             const listener = e => {
-                console.log('hamIsOn =>',hamIsOn);
                 if (navbarRef.current && e.target !== navbarRef.current && !navbarRef.current.contains(e.target)){
-                    console.log('hamIsOn =>',hamIsOn);
                     setHamIsOn(false)
                 }
             }
@@ -19,7 +17,6 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
                 window.removeEventListener("click", listener)
             }    
         }
-
     }, [hamIsOn])
     
     return (

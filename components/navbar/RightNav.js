@@ -1,19 +1,9 @@
-import { useContext } from 'react';
 import styled from 'styled-components';
 import { Data } from '../common/Data';
 import Link from 'next/link';
-import AppContext from "../Context/AppContext"
 
 
-export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIsOn }) {
-    
-    const context = useContext(AppContext)
-    
-    
-    
-
-    
-
+export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIsOn, setHamIsOn }) {
   return (
     <Ul hamIsOn={hamIsOn} >
     {
@@ -21,7 +11,7 @@ export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIs
         <Li 
             key={inx}>
             <Link
-                             
+                onClick={()=> hamIsOn ? setHamIsOn(false) : ''}
                 href={item.href}>
                 {item.name}
             </Link>
