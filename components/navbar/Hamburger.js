@@ -10,7 +10,7 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
 
     return (
         <>
-            <StyledHamburger onClick={() => context.setHamIsOn(!context.hamIsOn) }>
+            <StyledHamburger open={context.hamIsOn} onClick={() => context.setHamIsOn(!context.hamIsOn) }>
                 <div></div>
                 <div></div>
                 <div></div>
