@@ -1,24 +1,27 @@
-import {useContext} from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 import { Data } from '../common/Data';
 import Link from 'next/link';
 import AppContext from "../Context/AppContext"
 
 
-export default function RightNav ({ selectedLanguage, setSelectedLanguage}) {
+export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIsOn }) {
     
     const context = useContext(AppContext)
     
+    
+    
+
+    
 
   return (
-    <Ul hamIsOn={context.hamIsOn}>
+    <Ul hamIsOn={hamIsOn} >
     {
         Data.skills.menu[selectedLanguage].map((item, inx) => 
         <Li 
-            // className= "cool-link"
             key={inx}>
             <Link
-                onClick={()=> context.setHamIsOn(false)}               
+                             
                 href={item.href}>
                 {item.name}
             </Link>

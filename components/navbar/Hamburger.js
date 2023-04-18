@@ -1,22 +1,39 @@
 import styled from "styled-components"
-import { useContext } from "react"
+import { useContext, useRef, useEffect, useState } from "react"
 import RightNav from "./RightNav"
 import AppContext from "../Context/AppContext"
 
 export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
+    const navbarRef = useRef(null)
+    const hamRef = useRef(null)
+    const [hamIsOn, setHamIsOn] = useState(false)
+    //const context = useContext(AppContext)
+    //console.log('contact.hamIsOn =>',context.hamIsOn);
     
-    const context = useContext(AppContext)
-    console.log('contact.hamIsOn =>',context.hamIsOn);
+    useEffect(()=> {
+        const listener = e => {
+            console.log("listener");
+            if (navbarRef.current && e.target !== navbarRef.current && !navbarRef.current.contains(e.target)){
+                console.log("navbarRef");
+                setHamIsOn(false)
+            }
+            if(hamRef.current && e.target === hamRef.current ) {
+                console.log("hamRef");
+                setHamIsOn(!hamIsOn)
+            }
+        }
+        window.addEventListener("click", listener)
+    }, [])
 
     return (
-        <>
-            <StyledHamburger open={context.hamIsOn} onClick={() => context.setHamIsOn(!context.hamIsOn) }>
+        <div ref={navbarRef}>
+            <StyledHamburger open={hamIsOn} ref={hamRef}>
                 <div></div>
                 <div></div>
                 <div></div>
             </StyledHamburger>
-            <RightNav selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}/> 
-        </>
+            <RightNav selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} hamIsOn={hamIsOn}/> 
+        </div>
     )
 }
 
