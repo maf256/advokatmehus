@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Data } from '../common/Data';
 import Link from 'next/link';
 
-
 export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIsOn, setHamIsOn }) {
   return (
     <Ul hamIsOn={hamIsOn} >
@@ -11,12 +10,11 @@ export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIs
         <Li 
             key={inx}>
             <Link
-                onClick={()=> hamIsOn ? setHamIsOn(false) : ''}
+                onClick={()=> hamIsOn ? setHamIsOn(false) : null}
                 href={item.href}>
                 {item.name}
             </Link>
         </Li>
-        
         )
     }
     </Ul>

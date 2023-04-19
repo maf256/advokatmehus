@@ -26,7 +26,7 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
                 <div></div>
                 <div></div>
             </StyledHamburger>
-            <RightNav selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} hamIsOn={hamIsOn}/> 
+            <RightNav selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} hamIsOn={hamIsOn} setHamIsOn={setHamIsOn}/> 
         </div>
     )
 }
