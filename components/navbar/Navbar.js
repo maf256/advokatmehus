@@ -1,11 +1,23 @@
-import {useContext} from 'react'
+import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Hamburger from './Hamburger.js'
 import Link from 'next/link';
 
 export default function Navbar ({selectedLanguage, setSelectedLanguage }) {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => setOffset(window.pageYOffset))
+    return () => {
+        return (
+            window.removeEventListener('scroll', () => setOffset(window.pageYOffset))
+        )
+    }
+}, []);
+
+  
   return (
-    <Nav >
+    <Nav YOffset={offset} >
         <Link href="/"><h1>Advokat Erling Mehus</h1> </Link>
         <Hamburger selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />        
     </Nav>
@@ -21,7 +33,19 @@ const Nav = styled.nav `
   align-items: center;
   padding: 0 5% 0 5%;
   background-color: #cde5dd;
-  /* position: fixed; */
+  position: relative;
+  ${({ YOffset }) => YOffset > 200 ?
+        `   height: 4rem; 
+            box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
+        `
+        :
+        `   height: 7rem; 
+            box-shadow: 0;
+        `
+    }
+      transition: all .5s ease-in-out;
+      position: fixed;
+      z-index: 1001;
    h1{
       display: inline;
       color: black;

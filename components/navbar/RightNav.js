@@ -23,11 +23,13 @@ export default function RightNav ({ selectedLanguage, setSelectedLanguage, hamIs
 
 const Ul = styled.ul`
     list-style: none;
-
+    a {
+        letter-spacing: 2px;
+    }
     @media (min-width: 900px) {
         a {
             color: #272F3E;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             font-stretch: 100%;
         }
@@ -44,10 +46,12 @@ const Ul = styled.ul`
         right: 0;
         height: 100vh;
         width: 300px;
-        padding-top: 3.5rem;
+        padding-top: 6rem;
         transition: transform 0.3s ease-in-out;
         a {
-            color: ${({ hamIsOn }) => hamIsOn ? '#FFE9B1' : "#112B3C"}; 
+            color: ${({ hamIsOn }) => hamIsOn ? '#FFE9B1' : "#112B3C"};
+            letter-spacing: 2px;
+            font-size: 20px; 
         }
     }
 `;

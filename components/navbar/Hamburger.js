@@ -21,7 +21,7 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
     
     return (
         <div ref={navbarRef}>
-            <StyledHamburger open={hamIsOn} onClick={()=> setHamIsOn(!hamIsOn)}>
+            <StyledHamburger open={hamIsOn}  onClick={()=> setHamIsOn(!hamIsOn)}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -34,11 +34,9 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
 const StyledHamburger = styled.div`
     width: 2rem;
     height: 2rem;
-    position: fixed;
-    top: 15px;
-    right: 20px;
     display: none;
-    z-index: 100;
+    position: relative;
+    z-index: 10000;
     cursor: pointer;
 
     @media (max-width:900px){
@@ -51,7 +49,6 @@ const StyledHamburger = styled.div`
         height: 0.25rem;
         background-color: black;
         border-radius: 10px;
-            
         transform-origin: 1px;
         transition: all 0.3s linear;
         &:nth-child(1) {
