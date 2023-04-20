@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components"
 import Image from 'next/image'
-import ImgUrl from '../common/img/Erling Mehus.png'
+import ImgUrl from '../common/img/Erling_Mehus.png'
 
 export default function Header() {
   return <HeaderContainer>
