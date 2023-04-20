@@ -63,6 +63,7 @@ const Container = styled.div`
 
 const ImgContainer = styled.div`
   border-radius: 10px;
+  margin: 1px;
 `
 
 const TextContainer = styled.div`
@@ -116,6 +117,8 @@ const Text = styled.div`
   background: #272F3E;
   color: #cde5dd;
   letter-spacing: 2px;
+  font-size: 20px;
+  padding: 2px;
   
   @media (min-width: 900px) {
     width: 80vw;
