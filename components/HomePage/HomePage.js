@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Image from 'next/image'
 import ImgUrl from '../common/img/Erling_Mehus.png'
 
-export default function Header() {
+export default function HomePage() {
   return <HeaderContainer>
     <Container>
       <TextContainer>
@@ -18,9 +18,8 @@ export default function Header() {
         <Image
           src= {ImgUrl}
           alt="Erling Mehus"
-          loading="lazy"
+          loading="eager"
           placeholder="blur"
-          objectFit="content"
         />
       </ImgContainer>
     </Container>
@@ -33,7 +32,7 @@ export default function Header() {
   </HeaderContainer>;
 }
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.div`
     background: #cde5dd;
     padding-top: 200px;
 `
@@ -118,7 +117,6 @@ const Text = styled.div`
   color: #cde5dd;
   letter-spacing: 2px;
   font-size: 20px;
-  
   @media (min-width: 900px) {
     width: 80vw;
     padding: 100px 10%;
@@ -126,7 +124,7 @@ const Text = styled.div`
   }
   @media (max-width: 900px) {
     width: 100vw;
-    padding: 50px 10px;
+    padding: 50px 20px;
   }
 
 

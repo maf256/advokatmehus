@@ -24,7 +24,7 @@ export default function Navbar ({selectedLanguage, setSelectedLanguage }) {
   )
 }
 
-const Nav = styled.nav `
+const Nav = styled.header `
   width: 100%;
   height: 70px;
   display: flex; 
