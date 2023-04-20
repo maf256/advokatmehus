@@ -23,30 +23,35 @@ export default function Header() {
           objectFit="content"
         />
       </ImgContainer>
-
     </Container>
+
+    <Text>
+      <Typography>Jeg påtar meg kun oppdrag som jeg har kompetanse og erfaring til å fullføre frem til en best mulig minnelig løsning eller dom.</Typography>
+      <Typography>Grundig og tidlig vurdering av alle sakens sider er en sentral del av mitt arbeide som advokat.</Typography>
+      <Typography>Ta kontakt for en uforpliktende samtale dersom du har behov for advokatbistand.</Typography>
+    </Text>
   </HeaderContainer>;
 }
 
 const HeaderContainer = styled.header`
     background: #cde5dd;
     padding-top: 200px;
-    
 `
 
 const Container = styled.div`
   background: #272F3E;
   color: #cde5dd;
-  padding: 100px 0px;
-  
+  letter-spacing: 2px;
   @media (min-width: 900px) {
     width: 80vw;
+    padding: 100px 10%;
     display: flex;
     justify-content: space-evenly;
     
   }
   @media (max-width: 900px) {
     width: 100vw;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,15 +66,15 @@ const ImgContainer = styled.div`
 `
 
 const TextContainer = styled.div`
-  min-width: 300px;
+  min-width: 350px;
   h1 {
-    padding-bottom: 15px;;
+    padding-bottom: 20px;;
   }
   h2 {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
   div {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     display: flex;;
     justify-content: space-between;
   }
@@ -87,6 +92,8 @@ const Button = styled.button`
   background: #000a47;
   line-height: 1.15;
   font-size: 16px;
+  letter-spacing: 1px;
+  
   :hover {
       transition: all .1s ease;
       box-shadow: 0 0 0 0 #cde5dd, 0 0 0 3px #cde5dd;
@@ -94,4 +101,31 @@ const Button = styled.button`
 
 `
 
-const ButtonDiv = styled.div``
+const ButtonDiv = styled.div`
+
+`
+
+
+const Typography = styled.p`
+  background: #272F3E;
+  color: #cde5dd;
+  margin-bottom: 20px;;
+`
+
+const Text = styled.div`
+  background: #272F3E;
+  color: #cde5dd;
+  letter-spacing: 2px;
+  
+  @media (min-width: 900px) {
+    width: 80vw;
+    padding: 100px 10%;
+    
+  }
+  @media (max-width: 900px) {
+    width: 100vw;
+    padding: 50px 0px;
+  }
+
+
+`
