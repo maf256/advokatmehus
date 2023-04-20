@@ -49,7 +49,7 @@ const Ul = styled.ul`
         padding-top: 6rem;
         transition: transform 0.3s ease-in-out;
         a {
-            color: ${({ hamIsOn }) => hamIsOn ? '#FFE9B1' : "#112B3C"};
+            color: #FFE9B1;
             letter-spacing: 2px;
             font-size: 20px; 
         }
