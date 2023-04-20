@@ -26,7 +26,6 @@ export default function Navbar ({selectedLanguage, setSelectedLanguage }) {
 
 const Nav = styled.header `
   width: 100%;
-  height: 70px;
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
@@ -39,7 +38,7 @@ const Nav = styled.header `
             box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
         `
         :
-        `   height: 7rem; 
+        `   height: 5rem; 
             box-shadow: 0;
         `
     }
