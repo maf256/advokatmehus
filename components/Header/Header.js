@@ -110,7 +110,7 @@ const ButtonDiv = styled.div`
 const Typography = styled.p`
   background: #272F3E;
   color: #cde5dd;
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
 `
 
 const Text = styled.div`
@@ -118,7 +118,6 @@ const Text = styled.div`
   color: #cde5dd;
   letter-spacing: 2px;
   font-size: 20px;
-  padding: 2px;
   
   @media (min-width: 900px) {
     width: 80vw;
@@ -127,7 +126,7 @@ const Text = styled.div`
   }
   @media (max-width: 900px) {
     width: 100vw;
-    padding: 50px 0px;
+    padding: 50px 10px;
   }
 
 
