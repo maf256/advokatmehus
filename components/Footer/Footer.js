@@ -6,7 +6,7 @@ export default function Footer() {
   return <FooterContainer>
     <Container>
       <div>
-        <h4>Advokat Erling Mehus</h4>
+        <h2>Advokat Erling Mehus</h2>
         <a  href="tel:+4797016105"> <Phone fontSize="20px" color='#272F3E' margin="0 5px 0 0"/>+47 970 16 105</a>
         <a  href="mailto:erling@advokatmehus.no"><Email fontSize="20px" color='#272F3E' margin="0 5px 0 0"/>erling@advokatmehus.no</a>
       </div>
@@ -17,9 +17,8 @@ export default function Footer() {
 
 const FooterContainer = styled.div`
     width: 100%;
-    background: #cde5dd;
     background: #272F3E;
-    a, h4 {
+    a, h2 {
       color: #272F3E;
       font-size: 20px;
       width: 350px;
@@ -27,7 +26,10 @@ const FooterContainer = styled.div`
       font-weight: 600;
       display: inline;
       margin-bottom: 5px;
-    }    
+    } 
+    h2 {
+      font-size: 23px;
+    }   
 
 `
 
