@@ -59,7 +59,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
     text-decoration: none;
-    padding-left: 60px;
+    padding-left: 35px;
     ::after {
         content: '';
         display: block;
