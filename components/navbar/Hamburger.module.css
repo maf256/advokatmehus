@@ -1,0 +1,41 @@
+.StyledHamburger {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    position: relative;
+    z-index: 10000;
+    cursor: pointer;
+    @media (max-width:900px){
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column  nowrap;
+    }
+}
+
+.Hamburgerclose {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.5s linear;
+    transform: rotate(0)
+}
+
+.HamburgercloseLine2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Hamtrue1 {
+    transform:rotate(45deg)
+}
+
+.Hamture2 {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.Hamture3 {
+    transform: rotate(-45deg);
+}
