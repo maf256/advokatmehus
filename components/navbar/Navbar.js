@@ -33,7 +33,7 @@ const Nav = styled.header `
   padding: 0 5% 0 5%;
   background-color: #cde5dd;
   position: relative;
-  ${({ YOffset }) => YOffset > 200 ?
+  /* ${({ YOffset }) => YOffset > 200 ?
         `   height: 4rem; 
             box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
         `
@@ -42,11 +42,12 @@ const Nav = styled.header `
             box-shadow: 0;
         `
     }
-      transition: all .5s ease-in-out;
-      position: fixed;
-      z-index: 1001;
-   h1{
-      display: inline;
-      color: black;
-   }
+   */
+  transition: all .5s ease-in-out;
+  position: fixed;
+  z-index: 1001;
+  h1{
+    display: inline;
+    color: black;
+  }
 `
