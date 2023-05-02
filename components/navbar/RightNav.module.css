@@ -1,0 +1,55 @@
+.Ul {
+    letter-spacing: 2px;
+    list-style: none;
+    
+    @media (min-width: 900px) {
+        display: flex;
+        flex-flow: row nowrap;   
+        color: red;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: 100%;      
+    }
+    @media (max-width: 900px) {
+        flex-flow: column nowrap;
+        background-color: #0D2538;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        padding-top: 6rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        letter-spacing: 2px;
+        font-size: 20px; 
+    }
+}
+
+.Link {
+    @media (min-width: 900px) {
+        color: #272F3E;
+    }
+    @media (max-width: 900px) {
+        color: #FFE9B1;
+    }
+}
+.UlhamIsOn {
+    transform: translateX(0);
+}
+.Li{
+    text-decoration: none;
+    padding-left: 35px;
+}
+.Li ::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: black;
+    transition: width .2s;
+}
+.Li :hover::after {
+    width: 100%;
+    transition: width .6s;
+}

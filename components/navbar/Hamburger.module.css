@@ -19,7 +19,7 @@
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.5s linear;
-    transform: rotate(0)
+    /* transform: rotate(0) */
 }
 
 .HamburgercloseLine2 {
@@ -31,11 +31,11 @@
     transform:rotate(45deg)
 }
 
-.Hamture2 {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
 .Hamture3 {
     transform: rotate(-45deg);
+}
+
+.Hamture2 div {
+    transform: translateX(100%);
+    opacity: 0;
 }
