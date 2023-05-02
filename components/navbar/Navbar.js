@@ -38,7 +38,7 @@ const Nav = styled.header `
             box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
         `
         :
-        `   height: 4.5rem; 
+        `   height: 5rem; 
             box-shadow: 0;
         `
     }
