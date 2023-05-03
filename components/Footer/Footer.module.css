@@ -13,33 +13,6 @@
     margin-bottom: 5px;
 }
 
-/* a, h2 {
-  } 
-  h2 {
-    font-size: 23px;
-  }    */
-
-
-
-
-
-/* const FooterContainer = styled.div`
-    width: 100%;
-    background: #272F3E;
-    a, h2 {
-      color: #272F3E;
-      font-size: 20px;
-      width: 350px;
-      text-align: center;
-      font-weight: 600;
-      display: inline;
-      margin-bottom: 5px;
-    } 
-    h2 {
-      font-size: 23px;
-    }   
-`
-*/
 .Container {
     
     background: #cde5dd;
