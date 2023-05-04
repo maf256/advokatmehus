@@ -41,12 +41,12 @@
     padding-left: 12px;
   }
   
-  .Li:before {
+  /* .Li:before {
     content: "\2022";
     margin-right: 10px;
     color: #ff6347;
     font-weight: bold;
-  }
+  } */
   
   .Atag {
     color: #272F3E;
