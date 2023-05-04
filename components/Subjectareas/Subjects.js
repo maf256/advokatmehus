@@ -9,7 +9,7 @@ export const Subjects = () => {
         <ol className={styles.Ol}>
             {
                 Data.skills.Page2.nr.ditale.map((name, index) =>
-                <li  className={styles.Li} key={index}>{name}</li>
+                    <li className={styles.Li} key={index}>{name}</li>
             )
             }
         </ol>
@@ -19,7 +19,8 @@ export const Subjects = () => {
         <ol className={styles.Ol}>
             {
                 Data.skills.Page2.nr.ditale2.map(({name,href, index}) =>
-                <li className={styles.Li} ><a key={index} href={href}>{name}</a></li>
+                    <a key={index} href={href}><li className={styles.Li} >{name}</li></a>
+                
             )
             }
         </ol>
