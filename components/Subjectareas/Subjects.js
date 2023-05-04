@@ -3,27 +3,26 @@ import { Data } from "../common/Data";
 import styles from './Subjects.module.css'
 
 export const Subjects = () => {
-  return <div className={styles.mainContainer}>
-    <div className={styles.container}>
+  return <div className={styles.Container}>
+    <div className={styles.Card}>
         <h1 className={styles.H1}>{Data.skills.Page2.nr.subject}</h1>
-        <ol className={styles.Ol}>
+        <ul className={styles.Ul}>
             {
                 Data.skills.Page2.nr.ditale.map((name, index) =>
                     <li className={styles.Li} key={index}>{name}</li>
             )
             }
-        </ol>
+        </ul>
     </div>
-    <div className={styles.container}>
+    <div className={styles.Card}>
         <h1 className={styles.H1}>{Data.skills.Page2.nr.subject2}</h1>
-        <ol className={styles.Ol}>
+        <ul className={styles.Ul}>
             {
                 Data.skills.Page2.nr.ditale2.map(({name,href, index}) =>
-                    <a key={index} href={href}><li className={styles.Li} >{name}</li></a>
-                
+                    <li className={styles.Li} key={index}><a className={styles.Atag}  target="_blank" href={href}>{name}</a></li>
             )
             }
-        </ol>
+        </ul>
     </div>
-  </div>;
-};
+  </div>
+}
