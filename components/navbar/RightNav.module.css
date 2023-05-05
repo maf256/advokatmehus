@@ -1,16 +1,21 @@
-.Ul {
-    letter-spacing: 2px;
-    list-style: none;
-    
-    @media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
+    .Ul {
         display: flex;
         flex-flow: row nowrap;   
-        color: red;
+        /* color: red; */
         font-size: 16px;
         font-weight: 600;
         font-stretch: 100%;      
     }
-    @media (max-width: 900px) {
+    .Link {
+        color: #272F3E;
+    }
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    .Ul {
         flex-flow: column nowrap;
         background-color: #0D2538;
         position: fixed;
@@ -24,19 +29,20 @@
         letter-spacing: 2px;
         font-size: 20px; 
     }
-}
-
-.Link {
-    @media (min-width: 900px) {
-        color: #272F3E;
-    }
-    @media (max-width: 900px) {
+    .Link {
         color: #FFE9B1;
     }
 }
+  
+.Ul {
+    letter-spacing: 2px;
+    list-style: none;
+}
+
 .UlhamIsOn {
     transform: translateX(0);
 }
+
 .Li{
     text-decoration: none;
     padding-left: 35px;

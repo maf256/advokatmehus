@@ -20,16 +20,10 @@ export default function Hamburger({selectedLanguage, setSelectedLanguage }) {
     }, [hamIsOn])
     return (
         <div ref={navbarRef}>
-            <div className={styles.StyledHamburger} onClick={()=> setHamIsOn(!hamIsOn)}>
-                <div className={hamIsOn ? `${styles.Hamburgerclose} ${styles.Hamtrue1}` 
-                    : styles.Hamburgerclose}>
-                </div>
-                <div className={hamIsOn ? `${styles.Hamburgerclose} ${styles.Hamtrue2}` 
-                    :`${styles.Hamburgerclose} ${styles.HamburgercloseLine2}`}>
-                </div>
-                <div className={hamIsOn ? `${styles.Hamburgerclose} ${styles.Hamture3}` 
-                    : styles.Hamburgerclose}>
-                </div>
+            <div className={styles.burger} onClick={()=> setHamIsOn(!hamIsOn)}>
+                <div className={styles.bar1} style={{ transform: hamIsOn ? 'rotate(45deg)' : 'rotate(0)' }}></div>
+                <div className={styles.bar2} style={{ transform: hamIsOn ? 'translateX(100%)' : 'translateX(0)', opacity: hamIsOn ? 0 : 1 }}></div>
+                <div className={styles.bar3} style={{ transform: hamIsOn ? 'rotate(-45deg)' : 'rotate(0)' }}></div>
             </div>
             <RightNav selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} hamIsOn={hamIsOn} setHamIsOn={setHamIsOn}/> 
         </div>
