@@ -1,29 +1,42 @@
+@media only screen and (min-width: 900px) {
+  .Container {
+    width: 80vw;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .Text {
+    width: 80vw;
+    padding: 100px 10%;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .Container {
+    width: 100vw;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Text {
+    width: 100vw;
+    padding: 50px 20px;
+  }
+
+}
+
 .HeaderContainer {
     background: #cde5dd;
     padding-top: 200px;
 }
 
-
 .Container {
     background: #272F3E;
     color: #cde5dd;
     letter-spacing: 2px;
-    @media (min-width: 900px) {
-      width: 80vw;
-      padding: 100px 10%;
-      display: flex;
-      justify-content: space-evenly;
-      
-    }
-    @media (max-width: 900px) {
-      width: 100vw;
-      padding: 50px 0px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-    }    
 }
 
 .ImgContainer {
@@ -92,11 +105,6 @@
   transform: translateY(2px);
 }
 
-/* const ButtonDiv = styled.div`
-
-` */
-
-
 .Typography {
     background: #272F3E;
     color: #cde5dd;
@@ -108,14 +116,5 @@
     color: #cde5dd;
     letter-spacing: 2px;
     font-size: 20px;
-    @media (min-width: 900px) {
-      width: 80vw;
-      padding: 100px 10%;
-      
-    }
-    @media (max-width: 900px) {
-      width: 100vw;
-      padding: 50px 20px;
-    }
 }
 
