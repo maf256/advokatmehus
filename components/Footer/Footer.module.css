@@ -1,3 +1,24 @@
+@media only screen and (min-width: 900px) {
+  .Container {
+    width: 80vw;
+    padding: 50px 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .Container {
+    width: 100vw;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .FooterContainer {
     width: 100%;
     background: #272F3E;
@@ -21,22 +42,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @media (min-width: 900px) {
-      width: 80vw;
-      padding: 50px 10%;
-      display: flex;
-      flex-direction: column;
-      text-align: center
-    }
-    @media (max-width: 900px) {
-      width: 100vw;
-      padding: 20px 0px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
 }
 
 .Div {
