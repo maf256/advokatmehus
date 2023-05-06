@@ -23,3 +23,9 @@
   display: inline;
   color: black;
 }
+
+@media only screen and (max-width: 500px) {
+  .H1{
+    font-size: 25px;
+  }  
+}
